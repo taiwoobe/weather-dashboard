@@ -1,4 +1,4 @@
-# vue-weather-dashboard
+# Vue Weather Dashboard
 
 ## Project setup
 ```
