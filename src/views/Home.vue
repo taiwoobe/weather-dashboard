@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <Content v-bind:weather_data="weather_data"></Content>
+    <Content :weather_data="weather_data"></Content>
   </div>
 </template>
 
