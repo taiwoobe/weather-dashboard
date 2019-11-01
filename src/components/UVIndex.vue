@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>UV Index Information: {{ uvIndex }}</p>
+        <p>UV Index: {{ uvIndex }}</p>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
         props: ['highlights'],
         data() {
             return {
-                uvIndex: this.highlights.uvindex
+                uvIndex: this.highlights.uvIndex
             }
         },
     }

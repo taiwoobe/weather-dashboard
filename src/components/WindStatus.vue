@@ -1,9 +1,8 @@
 <template>
     <div>
-    <p>Wind Status Information: </p>
-    <p>Speed: {{ speed }}</p>
-    <p>Direction: {{ direction }}</p>
-  </div>
+        <p>Wind Speed — {{ windSpeed }}</p>
+        <p>Wind Direction — {{ derivedWindDirection }}, or {{ windDirection }} degree clockwise with respect to true N as 0 degree.</p>
+    </div>
 </template>
 
 <script>
@@ -11,8 +10,9 @@
         props: ['highlights'],
         data() {
             return {
-                speed: this.highlights.windstatus.speed,
-                direction: this.highlights.windstatus.direction
+                windSpeed: this.highlights.windStatus.windSpeed,
+                derivedWindDirection: this.highlights.windStatus.derivedWindDirection,
+                windDirection: this.highlights.windStatus.windDirection
             }
         },
     }

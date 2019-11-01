@@ -1,12 +1,7 @@
 <template>
-    <div>
-        <p>This child components of Content.vue are:</p>
-    <ul>
-      <li v-for="child in childComponents" :key="child.id">{{ child }}</li>
-    </ul>
-    {{ weather_data }}
-    <temp-var-charts :tempVar="tempVar"> </temp-var-charts>
-    <highlights :highlights="highlights"> </highlights>
+    <div class="content-wrapper">
+        <temp-var-charts :tempVar="tempVar"> </temp-var-charts>
+        <today-highlights :highlights="highlights"> </today-highlights>
     </div>
 </template>
 
@@ -14,21 +9,21 @@
 import TempVarChart from './TempVarChart'
 import Highlights from './Highlights'
     export default {
-        props: ["weather_data"],
+        props: ['highlights', 'tempVar'],
         components: {
             'temp-var-charts': TempVarChart,
-            'highlights': Highlights
+            'today-highlights': Highlights
         },
         data() {
             return {
-                childComponents: ['TempVarChart.vue', 'Highlights.vue'],
-                tempVar: this.weather_data.temperature,
-                highlights: this.weather_data.highlights,
+                
             }
         },
     }
 </script>
 
 <style lang="scss" scoped>
-
+.content-wrapper {
+    position: relative;
+}
 </style>
